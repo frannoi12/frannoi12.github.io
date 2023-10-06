@@ -16,7 +16,7 @@
 
 .enf1 >ul>li {
     display: inline-block;
-    position: relative;
+    /*position: relative;*/
 }
 
 
@@ -62,6 +62,52 @@
     margin-top: 6px;
     margin-left: -180px;
 }
+
+
+.milieu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titre {
+    /* text-align: center; */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .textDuTitre {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+.milieu h2 {
+    text-align: center;
+}
+
+.milieu p {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .foot {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
 
 body{
     background: url(./moto.jpg) fixed no-repeat center/cover;
