@@ -3,9 +3,9 @@ var actionEnvoyer = document.querySelector(".envoyer button");
 
 
 // Ici c'est la regex qui permet de vérifier si le champ nom contient uniquement que des lettres et ces réciproque avec celui du prenom aussi
-let regexNom = /^[A-Za-z]+$/
+let regexNom = /^[A-Za-z]+$/;
 
-let regexPrenom = /^[A-Za-z]+$/
+let regexPrenom = /^[A-Za-z]+$/;
 
 // Ici sa concerne la date bon j'explique ma regex
 // Premièrement sa concerne les jour de naissance c'est à dire : je veux que sa commence par 0
@@ -23,7 +23,7 @@ let regexPrenom = /^[A-Za-z]+$/
 // Soit sa commence par 20 suivit d'un premier chiffre compris dans l'intervale 0 à 2 et d'un quatrième chiffre dans l'intervale 0 à 3
 
 let regexDateNaissance =
-  /^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(1[0-9]{3}|20[0-2][0-3])$/
+  /^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(1[0-9]{3}|20[0-2][0-3])$/;
 
 // Ici sa concerne le numéro de télephone
 // je veux que sa commence par :
@@ -31,7 +31,7 @@ let regexDateNaissance =
 // soit par 7 suivit d'un chiffre compris entre 0 à 3 soit de 6 à 9
 // En suite le symbole \d représente n'importe quel chiffre compris dans l'intervalle de 0 à 9 et qui se repète 6 fois de suite
 
-let regexNumeroTelephone = /^(9[0-36-9]|7[0-36-9])\d{6}$/
+let regexNumeroTelephone = /^(9[0-36-9]|7[0-36-9])\d{6}$/;
 
 // Ici sa concerne le mail
 // on veut que sa commence par des lettres que sa soit minuscule où majuscule où des chiffer de 0 à 9 en suite
@@ -39,7 +39,7 @@ let regexNumeroTelephone = /^(9[0-36-9]|7[0-36-9])\d{6}$/
 // en suite on veux avoir le caractère @ suivit des lettres que sa soit minuscule où majuscule où des chiffer de 0 à 9 ensuite
 // on peut avoir le caractère point, le tiret de 6 ou le signe moins en plus du caractère point c'est pourquoi on à échapé sa part le \
 // après le caractère point on veut avoir au moin deux lettre que se soit minuscule où magiscule
-let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 actionEnvoyer.addEventListener(
   'click',
