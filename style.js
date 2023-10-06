@@ -1,5 +1,6 @@
 // Récupétration des input au niveau du formulaire
-var actionEnvoyer = document.querySelector('.envoyer button')
+var actionEnvoyer = document.querySelector(".envoyer button");
+
 
 // Ici c'est la regex qui permet de vérifier si le champ nom contient uniquement que des lettres et ces réciproque avec celui du prenom aussi
 let regexNom = /^[A-Za-z]+$/
@@ -43,20 +44,15 @@ let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 actionEnvoyer.addEventListener(
   'click',
   function validerFormulaire(
-    event,
-    nomInput,
-    prenomInput,
-    dateNaissanceInput,
-    telephoneInput,
-    emailInput
+    event
   ) {
-    event.preventDefault()
+    event.preventDefault();
 
-    var nomInput = document.getElementById('nom').value
-    var prenomInput = document.getElementById('prenom').value
-    var dateNaissanceInput = document.getElementById('date_naissance').value
-    var telephoneInput = document.getElementById('telephone').value
-    var emailInput = document.getElementById('email').value
+    var nomInput = document.getElementById("nom").value;
+    var prenomInput = document.getElementById("prenom").value;
+    var dateNaissanceInput = document.getElementById("date_naissance").value;
+    var telephoneInput = document.getElementById("telephone").value;
+    var emailInput = document.getElementById("email").value;
     if (
       nomInput &&
       prenomInput &&
@@ -70,7 +66,13 @@ actionEnvoyer.addEventListener(
         dateNaissanceInput,
         telephoneInput,
         emailInput
-      )
+      );
+    }
+    else{
+      alert('Veuillez remplir tous les champs');
     }
   }
-)
+);
+
+
+
