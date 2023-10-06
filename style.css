@@ -4,9 +4,16 @@ header {
   justify-content: center;
 }
 
+body {
+  /* display: flex; */
+  /* flex-direction: column; */
+  min-height: 100vh;
+}
+
 .tout {
   margin-bottom: 10px;
   margin-top: 80px;
+  flex: 1;
 }
 
 .corp {
