@@ -1,10 +1,27 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  div {
-    text-align: center;
-  }
+header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.corp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  text-align: center;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
