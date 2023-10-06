@@ -54,7 +54,8 @@ let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 
 actionEnvoyer.addEventListener(onclick,
-  function validerFormulaire (nomInput, prenomInput, dateNaissanceInput, telephoneInput, emailInput) {
+  function validerFormulaire (event,nomInput, prenomInput, dateNaissanceInput, telephoneInput, emailInput) {
+    event.preventDefault();
     if (nomInput && prenomInput && dateNaissanceInput && telephoneInput && emailInput){
       console.log(nomInput,prenomInput,dateNaissanceInput,telephoneInput,emailInput)
     }
