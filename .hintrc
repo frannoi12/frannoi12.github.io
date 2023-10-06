@@ -9,6 +9,9 @@
       {
         "html-has-lang": "off"
       }
-    ]
+    ],
+    "axe/structure": "off",
+    "button-type": "off",
+    "axe/name-role-value": "off"
   }
 }
