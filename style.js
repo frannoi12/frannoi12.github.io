@@ -1,10 +1,16 @@
 // Récupétration des input au niveau du formulaire
 
-const nomInput = document.getElementById('nom');
-const prenomInput = document.getElementById('prenom');
-const dateNaissanceInput = document.getElementById('date_naissance');
-const telephoneInput = document.getElementById('telephone');
-const emailInput = document.getElementById('email');
+var actionEnvoyer = document.querySelector('.envoyer')
+var nomInput = document.getElementById('nom').value;
+var prenomInput = document.getElementById('prenom').value;
+var dateNaissanceInput = document.getElementById('date_naissance').value;
+var telephoneInput = document.getElementById('telephone').value;
+var emailInput = document.getElementById('email').value;
+
+
+
+
+
 
 // Ici c'est la regex qui permet de vérifier si le champ nom contient uniquement que des lettres et ces réciproque avec celui du prenom aussi
 let regexNom = /^[A-Za-z]+$/;
@@ -44,3 +50,16 @@ let regexNumeroTelephone = /^(9[0-36-9]|7[0-36-9])\d{6}$/;
 // on peut avoir le caractère point, le tiret de 6 ou le signe moins en plus du caractère point c'est pourquoi on à échapé sa part le \
 // après le caractère point on veut avoir au moin deux lettre que se soit minuscule où magiscule
 let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+
+actionEnvoyer.addEventListener(onclick,
+  function validerFormulaire (nomInput, prenomInput, dateNaissanceInput, telephoneInput, emailInput) {
+    if (nomInput && prenomInput && dateNaissanceInput && telephoneInput && emailInput){
+      console.log(nomInput,prenomInput,dateNaissanceInput,telephoneInput,emailInput)
+    }
+  }
+  );
+
+
+
