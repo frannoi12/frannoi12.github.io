@@ -4,16 +4,35 @@ header {
   justify-content: center;
 }
 
+.tout {
+  margin-bottom: 10px;
+  margin-top: 80px;
+}
 
 .corp {
+  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
-.info {
-  text-align: center;
+
+  .quitter, .envoyé {
+    display: inline-block;
+    margin-right: 10px;
 }
+
+
+.quitter{
+  margin-left: 530px;
+}
+
+.envoyé{
+  margin-left: 160px;
+}
+
 
 
 footer {
