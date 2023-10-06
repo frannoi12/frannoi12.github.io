@@ -1,6 +1,6 @@
 // Récupétration des input au niveau du formulaire
 
-var actionEnvoyer = document.querySelector('.envoyer')
+var actionEnvoyer = document.querySelector('.envoyer').value;
 var nomInput = document.getElementById('nom').value;
 var prenomInput = document.getElementById('prenom').value;
 var dateNaissanceInput = document.getElementById('date_naissance').value;
