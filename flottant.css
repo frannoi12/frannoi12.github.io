@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2%;
+    align-items: center;
+}
+
+.enf1 >ul>li {
+    display: inline-block;
+    /*position: relative;*/
+}
+
+
+.enf1 ul li a {
+    display: block;
+    background: black;
+    padding: 15px 20px;
+}
+
+.enf1 ul ul {
+    display: none;
+    position: absolute;
+}
+
+.enf1 ul li:hover >ul{
+    display: block;
+}
+
+
+.enf1 ul ul ul {
+    top: 0px;
+    left: 100%;
+}
+
+
+.enf1 ul ul li{
+    position: relative;
+}
+
+
+
+.container .enf2 input{
+    border-radius: 15px;
+    border: 0px;
+    outline: none;
+    padding: 6px;
+    text-align: center;
+}
+
+
+.container .enf2 i {
+    position:absolute;
+    margin-top: 6px;
+    margin-left: -180px;
+}
+
+body{
+    background: url(./moto.jpg) fixed no-repeat center/cover;
+}
