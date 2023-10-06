@@ -123,6 +123,16 @@ actionEnvoyer.addEventListener(
       );
       window.location.href = "index.html";
     }
+
+    else if (
+      leNOM == false &&
+      lePRENOM == false &&
+      laDATE_NAISSANCE == false &&
+      leTELEPHONE == false &&
+      leEMAIL == false
+    ) {
+      alert("Les champs sont vide veiller les entrée Merci  !!");
+    }
     else if (
       leNOM == false
     ) {
