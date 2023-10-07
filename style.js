@@ -103,7 +103,21 @@ actionEnvoyer.addEventListener(
     var telephoneInput = document.getElementById("telephone").value;
     var emailInput = document.getElementById("email").value;
 
-    //
+
+    if (
+      !nomInput  &&
+      !prenomInput  &&
+      !dateNaissanceInput  &&
+      !telephoneInput  &&
+      !emailInput 
+    ) {
+      alert(
+        "Vérifier si tout les champs sont remplies merci  !!"
+      );
+      window.location.href = "contactUs.html";
+    };
+
+    // Appel des fonction définis globalement
     var leNOM = validerNom(nomInput);
     var lePRENOM = validerPrenom(prenomInput);
     var laDATE_NAISSANCE = validerDateNaissance(dateNaissanceInput);
@@ -124,45 +138,41 @@ actionEnvoyer.addEventListener(
       window.location.href = "index.html";
     }
 
-    else if (
-      leNOM == false &&
-      lePRENOM == false &&
-      laDATE_NAISSANCE == false &&
-      leTELEPHONE == false &&
+    if (
+      leNOM == false ||
+      lePRENOM == false ||
+      laDATE_NAISSANCE == false ||
+      leTELEPHONE == false ||
       leEMAIL == false
     ) {
-      alert("Les champs sont vide veiller les entrée Merci  !!");
+      if (
+        leNOM == false
+      ) {
+        alert("Le nom doit être uniquement en lettre !");
+      }
+      else if (
+        lePRENOM == false
+      ) {
+        alert("Le prenom doit être uniquement en lettre !");
+      }
+      else if (
+        leTELEPHONE == false
+      ) {
+        alert("Le numero de telephone doit être du TOGO !");
+      }
+      else if (
+        laDATE_NAISSANCE == false
+      ) {
+        alert("La Date doit être sous le format jj/mm/aaaa !");
+      }
+      else if (
+        leEMAIL == false
+      ) {
+        alert(" Vous n'avez pas entrez de mail !?");
+      }
     }
-    else if (
-      leNOM == false
-    ) {
-      alert("Le nom doit être uniquement en lettre !");
-    }
-    else if (
-      lePRENOM == false
-    ) {
-      alert("Le prenom doit être uniquement en lettre !");
-    }
-    else if (
-      laDATE_NAISSANCE == false
-    ) {
-      alert("La Date doit être sous le format jj/mm/aaaa !");
-    }
-    else if (
-      leTELEPHONE == false
-    ) {
-      alert("Le numero de telephone doit être du TOGO !");
-    }
-    else if (
-      leEMAIL == false
-    ) {
-      alert(" Pardon revoyé votre mail !");
-    }
-    else{
-      alert("Les champ sont vide veiller les entrée Merci !!");
+    else {
+      alert("Vos champ entrée ne correspondent pas à nos attente!!");
     }
   }
 );
-
-
-
