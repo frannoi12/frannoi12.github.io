@@ -1,3 +1,5 @@
+
+
 // Récupétration des input au niveau du formulaire
 var actionEnvoyer = document.querySelector(".envoyer button");
 
@@ -6,7 +8,7 @@ var actionEnvoyer = document.querySelector(".envoyer button");
 let regexNom = /^[A-Za-z]+$/;
 
 
-// fonction pour valier le nom entrée
+// fonction pour valider le nom entrée
 
 function validerNom(nomInput){
   if(regexNom.test(nom.value)){
@@ -103,20 +105,6 @@ actionEnvoyer.addEventListener(
     var telephoneInput = document.getElementById("telephone").value;
     var emailInput = document.getElementById("email").value;
 
-
-    if (
-      !nomInput  &&
-      !prenomInput  &&
-      !dateNaissanceInput  &&
-      !telephoneInput  &&
-      !emailInput 
-    ) {
-      alert(
-        "Vérifier si tout les champs sont remplies merci  !!"
-      );
-      window.location.href = "contactUs.html";
-    };
-
     // Appel des fonction définis globalement
     var leNOM = validerNom(nomInput);
     var lePRENOM = validerPrenom(prenomInput);
@@ -136,43 +124,32 @@ actionEnvoyer.addEventListener(
         "Merci d'avoir laissé vos information . Nous vous recontaterons merci !!"
       );
       window.location.href = "index.html";
-    }
-
-    if (
-      leNOM == false ||
-      lePRENOM == false ||
-      laDATE_NAISSANCE == false ||
-      leTELEPHONE == false ||
-      leEMAIL == false
-    ) {
-      if (
-        leNOM == false
-      ) {
-        alert("Le nom doit être uniquement en lettre !");
+    }else {
+      // Gestion des messages d'erreur
+      var messageErreur = "";
+      if (!leNOM) {
+        messageErreur += "Le nom doit être uniquement en lettres.\n";
       }
-      else if (
-        lePRENOM == false
-      ) {
-        alert("Le prenom doit être uniquement en lettre !");
+      if (!lePRENOM) {
+        messageErreur += "Le prénom doit être uniquement en lettres.\n";
       }
-      else if (
-        leTELEPHONE == false
-      ) {
-        alert("Le numero de telephone doit être du TOGO !");
+      if (!laDATE_NAISSANCE) {
+        messageErreur += "La Date doit être sous le format jj/mm/aaaa.\n";
       }
-      else if (
-        laDATE_NAISSANCE == false
-      ) {
-        alert("La Date doit être sous le format jj/mm/aaaa !");
+      if (!leTELEPHONE) {
+        messageErreur += "Le numéro de téléphone doit être au format attendu.\n";
       }
-      else if (
-        leEMAIL == false
-      ) {
-        alert(" Vous n'avez pas entrez de mail !?");
+      if (!leEMAIL) {
+        messageErreur += "Veuillez entrer une adresse email valide.\n";
       }
-    }
-    else {
-      alert("Vos champ entrée ne correspondent pas à nos attente!!");
+  
+      // Affichage des messages d'erreur
+      if (messageErreur !== "") {
+        alert(messageErreur);
+      } else {
+        alert("Tous les champs sont vides. Veuillez les remplir.");
+        window.location.href = "contactUs.html";
+      }
     }
   }
 );
