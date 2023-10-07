@@ -1,48 +1,48 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: none;
     text-decoration: none;
     list-style: none;
-}
-
+} */
+/* 
 .container {
     background-color: black;
     display: flex;
     justify-content: space-between;
     padding: 10px 2%;
     align-items: center;
-}
+} */
 
-.enf1 >ul>li {
+/* .enf1 >ul>li {
     display: inline-block;
-    /*position: relative;*/
-}
+    position: relative;
+} */
 
 
-.enf1 ul li a {
+/* .enf1 ul li a {
     display: block;
     background: black;
     padding: 15px 20px;
-}
+} */
 
-.enf1 ul ul {
+/* .enf1 ul ul {
     display: none;
     position: absolute;
-}
+} */
 
-.enf1 ul li:hover >ul{
+/* .enf1 ul li:hover >ul{
     display: block;
-}
+} */
 
 
-.enf1 ul ul ul {
+/* .enf1 ul ul ul {
     top: 0px;
     left: 100%;
-}
+} */
 
 
-.enf1 ul ul li{
+/* .enf1 ul ul li{
     position: relative;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .titre {
-    /* text-align: center; */
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -111,4 +111,114 @@ footer {
 
 body{
     background: url(./moto.jpg) fixed no-repeat center/cover;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
+
+.container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2%;
+    align-items: center;
+}
+
+.enf1 > ul > li {
+    display: inline-block;
+    /*position: relative;*/
+}
+
+.enf1 ul li a {
+    display: block;
+    background: black;
+    padding: 15px 20px;
+}
+
+.enf1 ul ul {
+    display: none;
+    position: absolute;
+}
+
+.enf1 ul li:hover > ul {
+    display: block;
+}
+
+.enf1 ul ul ul {
+    top: 0px;
+    left: 100%;
+}
+
+.enf1 ul ul li {
+    position: relative;
+}
+
+.container .enf2 input {
+    border-radius: 15px;
+    border: 0px;
+    outline: none;
+    padding: 6px;
+    text-align: center;
+}
+
+.container .enf2 i {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -180px;
+}
+
+.milieu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Utilisez min-height pour assurer une hauteur minimale */
+}
+
+.titre {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.textDuTitre {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.milieu h2 {
+    text-align: center;
+}
+
+.milieu p {
+    text-align: center;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.foot {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background: url(./moto.jpg) fixed no-repeat center/cover;
+    background-size: cover; /* Assurez-vous que l'image de fond couvre toute la page */
+    background-attachment: fixed; /* Assurez-vous que l'image de fond reste fixe */
+    background-position: center; /* Centrez l'image de fond */
+    background-repeat: no-repeat; /* Désactivez la répétition de l'image de fond */
+}
+
